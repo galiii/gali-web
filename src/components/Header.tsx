@@ -1,4 +1,5 @@
 import React from "react";
+import Links from "./SocialLinks";
 
 const contactList = [
   { section: "about" },
@@ -8,10 +9,9 @@ const contactList = [
 ];
 
 const socialList = [
-  { link: "github" },
-  { link: "linkedin" },
-  { link: "resume" },
-  
+  { name: "github", link: "../images/github.svg" },
+  { name: "linkedin", link: "../images/linkedin.svg" },
+  { name: "resume", link: "../images/file.svg" },
 ];
 
 function Header() {
@@ -20,8 +20,8 @@ function Header() {
       <nav className="header__nav">
         <ul className="list header__social-links">
           {socialList.map((social) => (
-            <li key={social.link} className="header__social-link">
-              {social.link}
+            <li key={social.name} className="header__social-link">
+              <Links social={social.link} />
             </li>
           ))}
         </ul>
@@ -30,7 +30,10 @@ function Header() {
         <ul className="list header__sections">
           {contactList.map((section) => (
             <li key={section.section} className="header__section">
+              <a className="header__section-link" href="#">
               {section.section}
+              </a>
+             
             </li>
           ))}
         </ul>

@@ -1,0 +1,111 @@
+/******************************************/
+/***** Mobile ****************************/
+/****************************************/
+
+.header-mobile {
+  width: 100vw;
+  box-shadow: inset 0px -1px 0px #d1d2d6;
+  border-bottom: solid 1px #d1d2d6;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  padding-bottom: 15px;
+  /*position: relative;*/
+}
+
+.header-mobile_open {
+  /*height: 100vh;*/
+  box-shadow: none;
+  border-bottom: none;
+  background-color: rgba(22, 22, 26, 0.8); /* #16161a*/
+  position: fixed;
+  opacity: 1;
+  transition: visibility 1s, opacity 1s ease-out;
+}
+
+.header-mobile__nav {
+  max-width: 100%;
+  background: transparent;
+  margin: 0 1.5em;
+  padding-top: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+  
+}
+
+.header-mobile__nav_open {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: transparent;
+  /*background-color: #1a1b22;*/
+}
+
+.header-mobile__icon {
+      
+}
+
+.header-mobile__list {
+  display: none;
+
+  list-style: none;
+  border-top: solid 1px #d1d2d6;
+  padding: 13px ;
+  margin: 0;
+
+  width: 100%;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+.header-mobile__list_open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  visibility: visible;
+}
+
+.header-mobile__item {
+  margin: 0 0 15px;
+  padding: 0;
+  height: 3vh;
+  background-color: transparent;
+  display: flex;
+}
+
+.header-mobile__link {
+  align-self: center;
+  color: var(--purple);
+  font-size: 1.5em;
+  font-family: "Inter";
+  font-weight: 700;
+  position: relative;
+  line-height: 103%;
+}
+
+.header-mobile__link:hover::before {
+  content: "";
+  background-color: var(--green); /*hsla(196, 61%, 58%, .75);*/
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 10px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-mobile__image {
+  background-image: url("../../images/loui-header-mobile.jpeg");
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

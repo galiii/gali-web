@@ -37,19 +37,31 @@
   }
 }
 
+/********************/
+/*** PAGE **********/
+/******************/
 .page {
   background: #16161a;
   max-width: 100%;
   position: sticky;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  /*padding-top: 10px;*/
 }
 
 .page__container {
-  font-family: "Inter", sans-serif;
+  /*font-family: "Inter", sans-serif;
   min-height: 100vh;
-  padding-top: 10px;
+  padding-top: 10px;*/
 
   /* max-width: 1280px;*/
   /*margin: 0 auto;*/
+}
+
+@media screen and (max-width: 650px) {
+  .page {
+    padding-top: 10px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -58,39 +70,41 @@
   }
 }
 
-.header {
-  color: var(--purple);
-  position: fixed;
-  z-index: 999px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+.link__image {
+  width: 30px;
 }
 
-.header__nav {
-   margin: 0 calc(36px + 10%);
-   padding-top: 15px;
+
+
+/*.header__section-link:hover {
+  box-shadow: inset 150px 0 0 0 #54b3d6;
+}*/
+
+/***************************************/
+/**********  LINK              ********/
+/*****************************************/
+
+.link {
+  /*height: 70px;
+  width: 70px;*/
+  /* background-color: #caf7e3;*/
+
+  text-align: center;
+  /*margin: 7px;*/
+  line-height: 10px;
 }
 
-.header__social-links {
-  display: flex;
-  background-color: gainsboro;
-  gap: 20px;
+.link__image {
+  transition: all 0.3s linear;
 }
 
-.header__social-link {
+.link:hover .link__image {
+  transform: scale(1.5);
 }
 
-.header__sections {
-  display: flex;
-  gap: 20px;
-  font-size: 1.5em;
-}
-
-.header__section {
-}
-
+/**********************************************************/
+/************ ABOUT **************************************/
+/*********************************************************/
 .about {
   margin: 0 auto;
   background-color: #242629;
@@ -98,13 +112,7 @@
   grid-template-columns: 0.4fr 0.3fr 1fr;
   gap: 10px;
   grid-auto-rows: minmax(10px, auto);
-  padding-bottom: 2rem;
-  padding-top: 4rem;
-}
-
-.list {
-  list-style-type: none;
-  margin: 0;
+  padding: 4rem 0 2rem;
 }
 
 .about__title {
@@ -147,6 +155,14 @@
   font-size: 1.125em;
 }
 
+.list {
+  list-style-type: none;
+  margin: 0;
+}
+
+/************************************/
+/************** SKILLS *************/
+/**********************************/
 .skills {
   margin: 0 auto;
   max-width: 984px;
@@ -301,6 +317,9 @@ input[type="email"]:focus,
   width: 50%;
 }
 
+/*****************************************/
+/*********** FOOTER *********************/
+/***************************************/
 .footer {
   background-color: var(--dark-grey-bg);
   padding: 0 calc(2em * 5);
