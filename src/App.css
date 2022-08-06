@@ -294,7 +294,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2em ;
+  padding-top: 2em;
 }
 
 .skills__title {
@@ -338,7 +338,6 @@
   align-items: center;
 }
 
-
 @media screen and (max-width: 570px) {
   .skills__list {
     grid-template-columns: repeat(2, 1fr);
@@ -361,7 +360,7 @@
 
 @media screen and (max-width: 380px) {
   .skills__item {
-   width: 100%;
+    width: 100%;
   }
 }
 
@@ -376,38 +375,77 @@
 
 .projects {
   box-sizing: border-box;
-  padding-bottom: 2em;
-  padding-top: 2em;
-  padding-bottom: 1.5em;
+  padding: 2em 0 6em;
   margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects__title {
   color: var(--white-text);
   font-size: 3em;
-}
-.cards {
-  margin: 0 calc(30% + 1em);
-  display: flex;
-  gap: 20px;
+  text-align: center;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards__list {
+  align-self: center;
+  margin: 0;
+  /*width: calc(100% - 180px);*/
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(282px, 1fr));
+  gap: 16px;
+}
+
+@media screen and (max-width: 1090px) {
+  .cards__list {
+    grid-template-columns: repeat(2, minmax(282px, 1fr));
+  }
+}
+
+
+@media screen and (max-width: 658px) {
+  .cards__list {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+
 .card {
-  max-width: 282px;
+  width: 282px;
   background-color: var(--dark-grey-bg);
   border-radius: 10px;
   overflow: hidden;
-  margin: 0;
+  margin: 0 auto;
+  height: 360px;
+}
+
+.card__row {
+  display: flex;
+  margin-left: 21px;
+  margin-right: 18px;
+  justify-content: space-between; /*space-around;*/
 }
 
 .card__title {
   color: var(--white-text);
   margin: 0;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
   font-weight: 900;
   font-size: 1.5em;
+  line-height: 29px;
+  max-width: 222px;
 }
 
 .card__text {
@@ -422,6 +460,49 @@
   object-position: top;
   height: 282px;
 }
+
+.card__github {
+  border: none;
+  padding: 0;
+  background-color: var(--green); /*transparent;*/
+  /*background-image: url(../../../images/logos/love.svg);
+  background-repeat: no-repeat;
+  background-position: center center;*/
+  -webkit-mask: url(./images/github.svg) no-repeat 50% 50%;
+  mask: url(./images/github.svg) no-repeat 50% 50%;
+  background-size: contain;
+  width: 21px;
+  height: 19px;
+  align-self: center;
+}
+
+.cards__button {
+  align-self: center;
+  background-color: var(--purple);
+  border: none;
+  padding: 22px 22px;
+  margin: 10px 0 20px;
+  color: var(--white-text);
+  border-radius: 80px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  width: 288px;
+}
+
+
+
+@media screen and (max-width: 658px) {
+  .cards__button {
+    padding: 16px 40px;
+    width: 240px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+  }
+}
+
 
 .contact {
   background-color: var(--dark-grey-bg);

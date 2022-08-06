@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "./Card";
+import Cards from "./Cards";
 
 function Projects() {
   return (
     <section className="projects">
         <h2 className="projects__title">Projects</h2>
-      <Card />
+      <Cards />
     </section>
   );
 }
