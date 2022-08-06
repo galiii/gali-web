@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../images/loui.jpeg";
+import profile from "../images/about/loui.jpeg";
 
 function About() {
   const about = {

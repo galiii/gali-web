@@ -140,6 +140,7 @@
   }
 }
 
+/********* title *******/
 .about__title {
   margin: 0;
   padding: 0;
@@ -176,6 +177,7 @@
   }
 }
 
+/***** image *****/
 .about__image {
   margin-left: auto;
   grid-row: 2;
@@ -412,14 +414,12 @@
   }
 }
 
-
 @media screen and (max-width: 658px) {
   .cards__list {
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
 }
-
 
 .card {
   width: 282px;
@@ -469,8 +469,8 @@
   /*background-image: url(../../../images/logos/love.svg);
   background-repeat: no-repeat;
   background-position: center center;*/
-  -webkit-mask: url(./images/github.svg) no-repeat 50% 50%;
-  mask: url(./images/github.svg) no-repeat 50% 50%;
+  -webkit-mask: url(./images/social/github.svg) no-repeat 50% 50%;
+  mask: url(./images/social/github.svg) no-repeat 50% 50%;
   background-size: contain;
   width: 21px;
   height: 19px;
@@ -493,8 +493,6 @@
   width: 288px;
 }
 
-
-
 @media screen and (max-width: 658px) {
   .cards__button {
     padding: 16px 40px;
@@ -503,7 +501,6 @@
     margin-top: 8px;
   }
 }
-
 
 .contact {
   background-color: var(--dark-grey-bg);
@@ -559,20 +556,91 @@ input[type="email"]:focus,
 /***************************************/
 .footer {
   background-color: var(--dark-grey-bg);
-  padding: 0 calc(2em * 5);
-  padding-top: 80px;
-  padding-bottom: 24px;
+  padding: 60px 0 24px;
   border: 1px gainsboro solid;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px calc(10px + 4vmin);
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
+
+.footer__menu {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 540px) {
+  .footer__list {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.footer__item {
+  display: flex;
+}
+
+@media screen and (max-width: 540px) {
+  .footer__item{
+    gap: 20px;
+  }
+}
+
+
+.footer__link {
+  color: var(--purple);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer__image {
+  width: 30px;
+  height: 30px;
+}
+.footer__social-name {
+  display: none;
+  align-self: center;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 540px) {
+  .footer__social-name {
+    display: inline-block;
+  }
 }
 
 .footer__copyright {
+  align-self: center;
   margin: 0;
   padding: 0;
-  color: #fff;
-  font-size: 14px;
+  color: var(--white-text);
+  font-size: 0.875em;
   line-height: 1.14;
 }
 
 .footer__copyright::before {
   content: " \00a9";
+}
+
+@media screen and (max-width: 540px) {
+  .footer__copyright {
+    align-self: flex-start;
+  }
 }

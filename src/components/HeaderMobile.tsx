@@ -1,7 +1,7 @@
 import React from "react";
 import Links from "./SocialLinks";
-import close from "../images/close.svg";
-import open from "../images/menu_mobile.svg";
+import close from "../images/mobile/close.svg";
+import open from "../images/mobile/menu_mobile.svg";
 
 const sectionList = [
   { section: "about" },

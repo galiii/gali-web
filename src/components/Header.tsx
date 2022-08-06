@@ -9,8 +9,8 @@ const contactList = [
 ];
 
 const socialList = [
-  { name: "github", link: "../images/github.svg" },
-  { name: "linkedin", link: "../images/linkedin.svg" },
+  { name: "github", link: "../images/social/github.svg" },
+  { name: "linkedin", link: "../images/social/linkedin.svg" },
   { name: "resume", link: "../images/file.svg" },
 ];
 
