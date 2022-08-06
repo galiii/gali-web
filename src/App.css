@@ -136,10 +136,9 @@
     width: calc(100% - 50px);
     max-width: 100%;
     padding-left: 2em;
-    padding-right: 2em;
+    padding-right: 1em;
   }
-  }
-
+}
 
 .about__title {
   margin: 0;
@@ -170,11 +169,10 @@
   }
 }
 
-
 @media screen and (max-width: 540px) {
   .about__title {
     font-size: 2em;
-    margin: 0 ;
+    margin: 0;
   }
 }
 
@@ -198,17 +196,17 @@
     width: 225px;
     height: 225px;
     grid-column: 1;
-    margin: 0 ;
+    margin: 0;
     border-radius: 100%;
   }
 }
+
 .about__content {
   margin-left: 20px;
   grid-row: 1 / 3;
   grid-column: 2 / 4;
   color: var(--grey-text);
   line-height: 160%;
-
 
   /*background-color: #61dafb;*/
 }
@@ -224,7 +222,7 @@
   .about__content {
     grid-column: 1;
     grid-row: 3;
-    margin: 0 ;
+    margin: 0;
     width: calc(100% - 80px);
     max-width: 100%;
     display: flex;
@@ -254,7 +252,6 @@
     font-size: 0.875em;
     line-height: 106%;
     margin: 0 0 20px;
-    
   }
 }
 
@@ -270,17 +267,12 @@
 @media screen and (max-width: 378px) {
   .about__text {
     font-size: 1em;
-   
-    
   }
 }
-
 
 @media screen and (max-width: 322px) {
   .about__text {
     font-size: 0.875em;
-    
-    
   }
 }
 
@@ -302,6 +294,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 2em ;
 }
 
 .skills__title {
@@ -312,12 +305,26 @@
   line-height: 120%;
 }
 
+@media screen and (max-width: 570px) {
+  .skills__title {
+    font-size: 2.5em;
+  }
+}
+
 .skills__text {
   margin: 0;
   padding: 0;
   color: #a7a9be;
   line-height: 163%;
   padding-bottom: 1.2rem;
+  width: calc(100% - 90px);
+  max-width: 100%;
+}
+
+@media screen and (max-width: 570px) {
+  .skills__text {
+    font-size: 0.875em;
+  }
 }
 
 .skills__list {
@@ -331,12 +338,31 @@
   align-items: center;
 }
 
+
+@media screen and (max-width: 570px) {
+  .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .skills__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .skills__item {
   display: flex;
   margin: 0;
   padding: 10px;
   border-radius: 10px;
   background-color: var(--purple);
+}
+
+@media screen and (max-width: 380px) {
+  .skills__item {
+   width: 100%;
+  }
 }
 
 .skill__name {
