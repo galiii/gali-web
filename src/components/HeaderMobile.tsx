@@ -16,7 +16,7 @@ const socialList = [
   { name: "resume", link: "../images/file.svg" },
 ];
 
-function HeaderMobile({ isMenuOpen = true }) {
+function HeaderMobile({ isMenuOpen = false}) {
   return (
     <header
       className={`header-mobile ${isMenuOpen ? "header-mobile_open" : ""}`}

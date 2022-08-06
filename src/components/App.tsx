@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./HeaderMobile";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
