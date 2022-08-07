@@ -11,8 +11,10 @@ function Footer() {
               target="_blank"
               className="link footer__link"
             >
-             {/*GitHub*/}
-             <img className="footer__image" src={"../images/social/github.svg"}/>
+              <img
+                className="footer__image"
+                src={"../images/social/github.svg"}
+              />
             </a>
             <span className="footer__social-name">GitHub</span>
           </li>
@@ -22,8 +24,10 @@ function Footer() {
               target="_blank"
               className="link footer__link"
             >
-          
-            <img className="footer__image" src={"../images/social/email-round.svg"}/>
+              <img
+                className="footer__image"
+                src={"../images/social/email-round.svg"}
+              />
             </a>
             <span className="footer__social-name">Email</span>
           </li>
@@ -33,9 +37,10 @@ function Footer() {
               target="_blank"
               className="link footer__link"
             >
-          
-
-              <img className="footer__image" src={"../images/social/linkedin.svg"}/>
+              <img
+                className="footer__image"
+                src={"../images/social/linkedin.svg"}
+              />
             </a>
             <span className="footer__social-name">LinkedIn</span>
           </li>
