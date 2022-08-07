@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="page">
-      {innerWidth < 1500 ? <HeaderMobile isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/> : <Header />}
+      {innerWidth < 650 ? <HeaderMobile isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/> : <Header />}
       <main className="page__container">
         <About />
         <Skills />
